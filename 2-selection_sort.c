@@ -24,15 +24,14 @@ void selection_sort(int *array, size_t size)
 			if (array[j] < array[smallest])
 				smallest = j;
 		}
-		
+
 		if (smallest != i)
 		{
 			temp = array[smallest];
 			array[smallest] = array[i];
 			array[i] = temp;
+			print_array(array, size);
 		}
-
-		print_array(array, size);
 	}
 
 }
