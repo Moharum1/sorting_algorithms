@@ -59,5 +59,5 @@ void lomuto_sort(int *array, int lo, int hi, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	Lomuto_part(array, 0, size - 1, size);
+	lomuto_sort(array, 0, size - 1, size);
 }
