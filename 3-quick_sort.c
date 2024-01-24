@@ -43,8 +43,8 @@ void lomuto_sort(int *array, int lo, int hi, size_t size)
 		swapArr(&array[i + 1], &array[hi]);
 		print_array(array, size);
 
-        lomuto_sort(array, lo, i, size);
-		lomuto_sort(array, i + 2, hi, size);
+        lomuto_sort(array, lo, i , size);
+		lomuto_sort(array, i + 1, hi, size);
 	}
 }
 
@@ -59,5 +59,8 @@ void lomuto_sort(int *array, int lo, int hi, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
+
 	lomuto_sort(array, 0, size - 1, size);
 }
