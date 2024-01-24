@@ -32,7 +32,6 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 		*(countArray + array[i]) += 1;
-
 	count = 0;
 	for (i = 0; i < (size_t)max; i++)
 	{
