@@ -1,13 +1,14 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swap two integers in an array.
+ * swapArr - Swap two integers in an array.
  * @a: The first integer to swap.
  * @b: The second integer to swap.
  */
 void swapArr(int *a, int *b)
 {
 	int temp;
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
@@ -43,7 +44,7 @@ void lomuto_sort(int *array, int lo, int hi, size_t size)
 		swapArr(&array[i + 1], &array[hi]);
 		print_array(array, size);
 
-        lomuto_sort(array, lo, i , size);
+		lomuto_sort(array, lo, i, size);
 		lomuto_sort(array, i + 1, hi, size);
 	}
 }
